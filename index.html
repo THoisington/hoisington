@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tanner Hoisington</title>
+    <style>
+
+   	/* If you are in here looking at this, for the record I hate inline styles and scripts */
+
+    	@font-face {
+    		font-family: Quicksand;
+    		src: url("Quicksand.otf");
+    	}
+
+	    html, body{
+	    	width: 100%;
+	    	height: 100%;
+	    	background-image: url(bg.png);
+	    	background-repeat: repeat;
+	    	font-family: Quicksand;
+	    	overflow: hidden;
+	    }
+
+		#container{
+			min-height: 100%;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content:center;
+			align-items: center;
+			align-content: center;
+  		}
+
+  		#whoops{
+  			font-size: 10vw; 
+  			opacity: 0;
+  		}
+
+
+  		#message{
+  			text-align: justify;
+  			font-size: 14;
+  			opacity: 0;
+  			background-color: #f5f4f2;
+	  		-webkit-box-shadow: 3px 10px 23px 2px rgba(240,240,240,0.19);
+			-moz-box-shadow: 3px 10px 23px 2px rgba(240,240,240,0.19);
+			box-shadow: 3px 10px 23px 2px rgba(240,240,240,0.19);
+			padding: 10px 20px;
+  			@media (min-width: 600px){
+  				font-size: 3vw;
+  			}
+  		}
+    </style>
+  </head>
+  <body>
+  	<div id="container">
+  	<h1 id="whoops">You got me.</h1>
+  	<div id="message">
+  		<p>Dear Fuzzco, if you are looking for a portfolio website: I don't have one yet...</p>
+  		<p>However, not long after you see this I will hopefully get to working on a sample website I wanted to make for a local cafe that will be uploaded here.</p>
+  	</div>
+  	</div>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script>
+		$(document).ready(function(){
+	        $('#whoops').animate({opacity:1},1000, function(){
+	        	$('#message').animate({opacity:1});
+	        });	        
+		});
+	</script>
+  </body>
+</html>
